@@ -73,7 +73,7 @@ const Listdata = () => {
                   <View style={styles.textContainer}>
                     <Text style={styles.cardtitle}>{item.book_name}</Text>
                     <Text style={styles.cardSubtitle}>{item.author_name}</Text>
-                    <Text style={styles.genre}>{item.genre}</Text>
+                    <Text style={styles.book_price}>{item.book_price}</Text>
                   </View>
                   <View style={styles.chevron}>
                     <FontAwesomeIcon icon={faChevronRight} size={20} color="#8D6E63" />

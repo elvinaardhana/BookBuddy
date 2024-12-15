@@ -7,11 +7,11 @@ const Createdata = () => {
   const jsonUrl = 'http://10.0.2.2:3000/book'; // API untuk emulator
   const [book_name, setBookName] = useState('');
   const [author_name, setAuthorName] = useState('');
+  const [book_price, setBookPrice] = useState('');
   const [genre, setGenre] = useState('');
   const [alamat, setAlamat] = useState('');
   const [longitude, setLongitude] = useState('');
   const [latitude, setLatitude] = useState('');
-  const [image, setImage] = useState(null);
   const [isMapVisible, setIsMapVisible] = useState(false); // Untuk kontrol apakah peta ditampilkan atau tidak
   const [selectedLocation, setSelectedLocation] = useState(null); // Lokasi yang dipilih
   const [region, setRegion] = useState({
@@ -75,6 +75,7 @@ const Createdata = () => {
     const data = {
       book_name: book_name,
       author_name: author_name,
+      book_price: book_price,
       genre: genre,
       alamat: alamat,
       longitude: longitude,
@@ -95,6 +96,7 @@ const Createdata = () => {
         alert('Data tersimpan');
         setBookName('');
         setAuthorName('');
+        setBookPrice('');
         setGenre('');
         setAlamat('');
         setLongitude('');
@@ -122,6 +124,12 @@ const Createdata = () => {
               placeholder="Nama Penulis"
               value={author_name}
               onChangeText={(value) => setAuthorName(value)}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Harga Buku"
+              value={book_price}
+              onChangeText={(value) => setBookPrice(value)}
             />
             <TextInput
               style={styles.input}
